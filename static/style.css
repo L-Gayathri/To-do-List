@@ -1,0 +1,72 @@
+
+body {
+    background:url('download.jpeg');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center center; 
+    margin: 0;
+    height: 100vh;
+}
+#navbar
+{
+    display: flex;
+    justify-content: center;
+    color: white;
+    background-color: #1b1a1a;
+    font-size: 23px;
+}
+.todo-container 
+{
+    border: 2px solid white;
+    margin: 10px auto;
+    width: 550px;
+    height: 550px;
+    background-color: #37223b;
+    border-radius: 19px;
+}
+.txt
+{
+    display: flex;
+        margin: 18px 0px;
+        justify-content: center;
+}
+#todo
+{
+    width: 400px;
+    height: 32px;
+    text-align: center;
+    font-weight: bolder;
+}
+#add 
+{
+    margin: 0px 18px;
+    width: 50px;
+    background-color: #73b6d4;
+    font-weight: bolder;
+}
+.todo 
+{
+    display: flex;
+    /* border: 2px solid green; */
+    margin: -13px 20px;
+}
+#para 
+{
+    text-align: center;
+    background-color: #E91E63;
+    font-weight: bolder;
+    width: 418px;
+    height: 35px;
+    border-radius: 14px;
+}
+#check
+{
+    width: 27px;
+    height: 56px;
+}
+#delete
+{
+    margin: 20px;
+    height: 27px;
+    background-color: #84dc80;
+}

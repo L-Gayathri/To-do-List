@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+<body>
+    <nav id="navbar">
+        <h1>TO-DO list</h1>
+    </nav>
+    <form action="{{url_for('home')}}" method="POST">
+        <div class="txt">
+            <input type="text" name="todoname" id="todo" placeholder="enter your work list">
+        <button id="add" name="addtodo">Add</button>
+        </div>
+    </form>
+    <div class="todo-container">
+        {%for task in todo%}
+        <div class="todo">
+            <p id="para">{{task.name}}</p>
+            <form action="{{url_for('checked_todo',todo_id=task.id)}}"method="POST" >
+            <input type="checkbox" id="check" name="checktodo"{%if task.done%} checked{% endif %} onchange="this.form.submit()">
+            </form>
+            <form action="{{url_for('delete_todo',todo_id=task.id)}}"method="POST">
+                <button id="delete" name="deletetodo">Delete</button>
+            </form>
+        </div>
+    {% endfor %}
+
+    </div>
+</body>
+</html>
